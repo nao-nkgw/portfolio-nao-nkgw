@@ -448,7 +448,7 @@ function App() {
                     rows="6"
                     className="w-full rounded-md px-6 bg-white text-sm pt-3 outline-none"
                   ></textarea>
-                  <button
+                  <button onClick={sendEmail}
                     type="button"
                     className="text-[#333] bg-teal-200 hover:bg-teal-300 font-semibold rounded-md text-sm px-6 py-3 block w-full mt-3"
                   >
