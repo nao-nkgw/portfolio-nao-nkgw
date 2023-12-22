@@ -1,27 +1,30 @@
-import "./App.css";
+import BackTop from "./BackTop";
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
 
 
+
+emailjs.init("RjChyRtl7U1TzHN7a");
+
 function App() {
+  const STYLE = {
+    hover: `mr-5 relative py-1 after:absolute after:bottom-0 after:left-0 after:w-full after:scale-x-0 hover:after:scale-x-100 after:transition-all after:origin-left after:h-[2px] after:bg-teal-500`,
+    icon: `text-[18px] text-white bg-[#8F8F7A] rounded`,
+  };
+
   const form = useRef();
-  
+
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs
-      .sendForm(
-        process.env.REACT_APP_SERVICE_ID,        // <- 正しい形式で指定
-        process.env.REACT_APP_TEMPLATE_ID,       // <- 正しい形式で指定
-        form.current,
-        process.env.REACT_APP_PUBLIC_KEY          // <- 正しい形式で指定
-      )
+      .sendForm("service_7zwnj39", "contact_form_portfolio", form.current)
       .then(
         (result) => {
           alert("message sent successfully...");
           console.log(result.text);
         },
         (error) => {
-          console.log(error.text);
+          console.error("Failed to the send form", error);
         }
       );
   };
@@ -32,34 +35,26 @@ function App() {
         <div className="container flex mx-auto pb-3 pt-0 flex-col md:flex-row items-center ">
           <a href="#" className="font-medium text-blue-950 mb-4 md:mb-0">
             <span className="text-xl ">
-              <img className="pl-10 mt-2" src="./img/logo.svg" alt="logo-nao" />
+              <img
+                className="mt-3 2xl:pl-20 xl:pl-10"
+                src="./img/logo.svg"
+                alt="logo-nao"
+              />
             </span>
           </a>
 
           <nav className="md:ml-auto text-base ">
-            <a
-              href="#home"
-              className="mr-5 relative py-1 after:absolute after:bottom-0 after:left-0 after:w-full after:scale-x-0 hover:after:scale-x-100 after:transition-all after:origin-left after:h-[2px] after:bg-teal-500"
-            >
+            <a href="#home" className={STYLE.hover}>
               home
             </a>
 
-            <a
-              href="#projects"
-              className="mr-5 relative py-1 after:absolute after:bottom-0 after:left-0 after:w-full after:scale-x-0 hover:after:scale-x-100 after:transition-all after:origin-left after:h-[2px] after:bg-teal-500"
-            >
+            <a href="#projects" className={STYLE.hover}>
               projects
             </a>
-            <a
-              href="#skills"
-              className="mr-5 relative py-1 after:absolute after:bottom-0 after:left-0 after:w-full after:scale-x-0 hover:after:scale-x-100 after:transition-all after:origin-left after:h-[2px] after:bg-teal-500"
-            >
+            <a href="#skills" className={STYLE.hover}>
               skills
             </a>
-            <a
-              href="#contact"
-              className="mr-5 relative py-1 after:absolute after:bottom-0 after:left-0 after:w-full after:scale-x-0 hover:after:scale-x-100 after:transition-all after:origin-left after:h-[2px] after:bg-teal-500"
-            >
+            <a href="#contact" className={STYLE.hover}>
               contact
             </a>
           </nav>
@@ -67,9 +62,9 @@ function App() {
       </header>
 
       <section className="text-gray-700" id="home">
-        <div className="flex container mx-auto my-auto py-20 px-20 flex-col md:flex-row items-center justify-center">
-          <div className="md:w-1/2 flex-grow mb-16 lg:pr-20 md:pr-16 text-center md:text-left">
-            <h1 className="text-3xl mt-20 sm:text-6xl text-blue-950 font-medium, mb-4 ">
+        <div className="flex container mx-auto my-auto 2xl:py-20 2xl:px-20 lg:py-10 lg:px-10 flex-col md:flex-row items-center justify-center px-5 py-5 ">
+          <div className="md:w-1/2 flex-grow 2xl:mb-16 xl:mb-8 mb-4 lg:pr-20 md:pr-16 text-center md:text-left">
+            <h1 className="text-3xl 2xl:mt-20 xl:mt-20 mt-5 sm:text-6xl text-blue-950 font-medium, 2xl:mb-4 xl:mb-2 mb-1">
               Nao Nakagawa{" "}
             </h1>
             <br />
@@ -85,9 +80,10 @@ function App() {
               from software engineering to UI/UX. This includes graphics and
               also illustrations!
             </p>
+            <a href="https://drive.google.com/file/d/1ZIbLklQ0fGQVeNJ4nQ9Y4ALsFN2Bopae/view?usp=sharing" target="blank">
             <button className="text-white bg-rose-500 py-2 px-6 border-0 rounded text-lg hover:bg-rose-600 duration-300">
               VIEW CV
-            </button>
+            </button></a>
           </div>
           <div className="md:w-1/2 lg:max-w-lg w-5/6">
             <img src="./img/icon-green.svg"></img>
@@ -95,15 +91,18 @@ function App() {
         </div>
       </section>
       <section className=" bg-yellow-200">
-        <div className="container px-20 py-24 mx-auto">
+        <div className="container 2xl:py-20 2xl:px-20 lg:py-10 lg:px-10 mx-auto pb-10">
           <div className="text-center mb-10">
-            <h1 className="text2xl sm:text-3xl font-medium mb-2 text-blue-950">
+            <h1
+              className="2xl:pt-1 ml-3 text-2xl mb-2 text-blue-950 pt-10"
+              id="projects"
+            >
               Projects
             </h1>
           </div>
 
           {/* card div */}
-          <div className=" grid-cols-1 sm:grid md:grid-cols-2 ">
+          <div className=" grid-cols-1 sm:grid md:grid-cols-2">
             <div className="mx-3 mt-6 flex flex-col self-start rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.2),0_10px_20px_-2px_rgba(0,0,0,0.1)] dark:bg-white sm:shrink-0 sm:grow sm:basis-0">
               <a href="#!">
                 <img
@@ -125,7 +124,7 @@ function App() {
                 </p>
 
                 <div className="flex container mx-auto pt-2 justify-center">
-                  <a href="https://github.com/nao-nkgw" target="blank">
+                  <a href="https://github.com/nao-nkgw/mern-pizza-blog-frontend" target="blank">
                     <svg
                       className="h-8 w-8 text-red-500 mr-4 hover:text-rose-800 hover:scale-110 hover:duration-200"
                       viewBox="0 0 24 24"
@@ -139,7 +138,7 @@ function App() {
                       <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
                     </svg>{" "}
                   </a>
-                  <a href="https://github.com/nao-nkgw" target="blank">
+                  <a href="https://nao-nkgw-pizza-review.netlify.app/" target="blank">
                     <svg
                       className="h-8 w-8 text-red-500 hover:text-rose-800 hover:scale-110 hover:duration-200"
                       viewBox="0 0 24 24"
@@ -178,7 +177,7 @@ function App() {
                 </p>
 
                 <div className="flex container mx-auto pt-2 justify-center">
-                  <a href="https://github.com/nao-nkgw" target="blank">
+                  <a href="https://github.com/nao-nkgw/weather-app" target="blank">
                     <svg
                       className="h-8 w-8 text-red-500 mr-4 hover:text-rose-800 hover:scale-110 hover:duration-200"
                       viewBox="0 0 24 24"
@@ -192,7 +191,7 @@ function App() {
                       <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
                     </svg>{" "}
                   </a>
-                  <a href="https://github.com/nao-nkgw" target="blank">
+                  <a href="https://nao-nkgw-weather.netlify.app" target="blank">
                     <svg
                       className="h-8 w-8 text-red-500 hover:text-rose-800 hover:scale-110 hover:duration-200"
                       viewBox="0 0 24 24"
@@ -217,21 +216,21 @@ function App() {
 
       {/*Skills Section */}
       <section className="">
-        <div className="container px-20 py-24 pb-0 mx-auto ">
-          <div className="text-center mb-10">
-            <h1 className="text2xl sm:text-3xl font-medium mb-2 text-blue-950">
+        <div className="container 2xl:py-20 2xl:px-20 lg:py-10 lg:px-10 pb-0 mx-auto ">
+          <div className="text-center mb-10 mt-10">
+            <h1 className=" ml-3 text-2xl mb-2 text-blue-950" id="skills">
               Skills
             </h1>
           </div>
 
           <div className="flex container mx-auto selection:md:flex-row items-center justify-center">
             <div className="md:w-1/2 flex-grow mb-4 lg:pr-24 md:pr-16 text-center md:text-left">
-              <h2 className="ml-3 text-2xl">Tech stack</h2>
+              <h2 className="2xl:ml-3 2xl:text-2xl text-xl ">Tech stack</h2>
             </div>
           </div>
 
           {/* card div */}
-          <section className=" grid-cols-3 gap-x-3 gap-y-5  sm:grid md:grid-cols-5 lg:grid-cols-7 xl:grid-cols-9">
+          <section className=" grid grid-cols-3 gap-x-3 gap-y-5  sm:grid md:grid-cols-5 lg:grid-cols-7 xl:grid-cols-9">
             <div className=" mx-0 mt-0 self-start text-center">
               <div className=" mx-3 mt-6  self-start rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.2),0_10px_20px_-2px_rgba(0,0,0,0.1)] dark:bg-white sm:shrink-0 sm:grow sm:basis-0">
                 <img
@@ -366,16 +365,26 @@ function App() {
             </div>
           </section>
         </div>
-        <div className="container px-20 py-12 mx-auto">
+        <div className="container 2xl:py-20 2xl:px-20 lg:py-10 lg:px-10 pb-10 mx-auto">
           <div className="text-center"></div>
           <div className="flex container mx-auto selection:md:flex-row items-center justify-center">
             <div className="md:w-1/2 flex-grow mb-4 lg:pr-24 md:pr-16 text-center md:text-left">
-              <h2 className="ml-3 text-2xl">Others</h2>
+              <h2 className="2xl:ml-3 2xl:text-2xl text-xl mt-5">Others</h2>
             </div>
           </div>
 
           {/* card div */}
-          <section className="grid-cols-3 sm:grid md:grid-cols-5 lg:grid-cols-7 xl:grid-cols-9">
+          <section className="grid grid-cols-3 gap-x-3 gap-y-5  sm:grid md:grid-cols-5 lg:grid-cols-7 xl:grid-cols-9">
+            <div className=" mx-0 mt-0 self-start text-center">
+              <div className=" mx-3 mt-6  self-start rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.2),0_10px_20px_-2px_rgba(0,0,0,0.1)] dark:bg-white sm:shrink-0 sm:grow sm:basis-0">
+                <img
+                  className="flex rounded-lg"
+                  src="./img/figma.svg"
+                  alt="Figma"
+                />
+              </div>
+              <p className="pt-1 ">Figma</p>
+            </div>
             <div className=" mx-0 mt-0 self-start text-center">
               <div className=" mx-3 mt-6  self-start rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.2),0_10px_20px_-2px_rgba(0,0,0,0.1)] dark:bg-white sm:shrink-0 sm:grow sm:basis-0">
                 <img
@@ -412,28 +421,32 @@ function App() {
 
       {/* Get in Touch Section */}
       <section>
-        {/*       <div> <h1>Contact Form</h1> <form className='cf' ref={form} onSubmit={sendEmail}> 
-        // div container with input element </form> </div>
-         */}
-
         <div className=" bg-teal-200">
-          <div className="container px-20 py-0 mx-auto">
-            <div className="grid lg:grid-cols-3 items-center max-lg:justify-center h-full max-sm:px-4">
+          <div className="container 2xl:py-20 2xl:px-20 lg:py-10 lg:px-10 pb-10 mx-auto pt-10">
+            <div className="grid lg:grid-cols-3 max-lg:justify-center h-full max-sm:px-4">
               <div className="max-w-lg max-lg:mx-auto max-lg:text-center max-lg:mb-6">
-                <h2 className="text-2xl sm:text-3xl font-medium mb-2 text-blue-950">
+                <h2
+                  className="text-2xl sm:text-3xl font-medium mb-2 text-blue-950"
+                  id="contact"
+                >
                   Get In Touch
                 </h2>
                 <p className="text-sm text-blue-950 mt-4">
                   Have a specific inquiry or looking to explore new
                   opportunities? I&lsquo;ll be happy to talk with you!
                 </p>
-                <form className="'cf' ref={form} onSubmit={sendEmail} mx-auto mt-8 bg-white rounded-lg py-6 px-4 shadow-md">
+                <form
+                  ref={form}
+                  className="'cf' ref={form} onSubmit={sendEmail} mx-auto mt-8 bg-white rounded-lg py-6 px-4 shadow-md"
+                >
                   <input
+                    name="to_name"
                     type="text"
                     placeholder="Name"
                     className="w-full rounded-md h-12 px-6 bg-white text-sm mb-4 outline-none"
                   />
                   <input
+                    name="from_name"
                     type="email"
                     placeholder="Email"
                     className="w-full rounded-md h-12 px-6 bg-white text-sm mb-4 outline-none"
@@ -444,35 +457,41 @@ function App() {
                     className="w-full rounded-md h-12 px-6 bg-white text-sm mb-4 outline-none"
                   />
                   <textarea
+                    name="message"
                     placeholder="Message"
                     rows="6"
                     className="w-full rounded-md px-6 bg-white text-sm pt-3 outline-none"
                   ></textarea>
-                  <button onClick={sendEmail}
-                    type="button"
+                  <input
+                    onClick={sendEmail}
+                    type="submit"
                     className="text-[#333] bg-teal-200 hover:bg-teal-300 font-semibold rounded-md text-sm px-6 py-3 block w-full mt-3"
-                  >
-                    Send Message
-                  </button>
+                    value="Send Message"
+                  />
                 </form>
               </div>
               <div className="z-10 relative lg:col-span-2">
                 <img
                   src="./img/contact-icon-w.svg"
-                  className="w-full px-20 py-20"
+                  className="2xl:py-0 2xl:px-auto  lg:py-0 lg:px-20 pb-10 mx-auto pt-10 w-3/4 my-auto "
                 />
               </div>
             </div>
           </div>
+          <div className="h-full w-full overflow-x-hidden">
+            <BackTop />
+
+          </div>
+
         </div>
       </section>
 
       {/* footer section */}
-      <section>
-        <footer className="footer bg-blue-950 my-auto mx-auto">
+      <section className="container　 3xl:py-0 3xl:px-0 3xl:py-0 2xl:px-0 lg:py-0 lg:px-0 px-5  bg-blue-950">
+        <footer className=" footer my-auto mx-auto ">
           <div className="footer-section  my-auto mx-auto">
             <div className="grid max-lg:grid-cols-5 justify-center lg:grid-cols-5 lg:justify-center md:grid-cols-5 md:justify-center max-sm:px-4">
-              <p className="container flex lg:text-base px-auto my-auto font-medium justify-end pr-7 text-white  md:text-xs md:pl-10 md:px-auto md:py-auto  md:font-medium ">
+              <p className="container flex lg:text-base px-auto my-auto font-medium justify-center pr-7 text-white  md:text-xs md:pl-10 md:px-auto md:py-auto  md:font-medium ">
                 Let&lsquo;s connect
               </p>
               <div className="container flex my-auto mx-auto mr-15 ">
@@ -514,7 +533,7 @@ function App() {
               <div></div>
 
               <div className="text-xs px-auto  pt-2">
-                <p className="container flex pr-20 lg:text-base px-auto my-auto pb-5 pt-3 font-medium justify-en text-white md:text-xs md:pl-10 md:px-auto md:pb-5 md:pt-3 md:xs ">
+                <p className="container flex pr-20 lg:text-base px-auto my-auto pb-5 pt-3 font-medium justify-en text-white md:text-xs md:pl-10 md:px-auto md:pb-5 md:pt-3 md:xs text-end ">
                   ©2023 Nao Nakagawa
                 </p>
               </div>
