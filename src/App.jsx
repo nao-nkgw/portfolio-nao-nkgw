@@ -108,7 +108,7 @@ function App() {
                 <img
                   className="rounded-t-lg"
                   src="../public/img/pizzareview.jpg"
-                  alt="pizzaReview"
+                  alt="pizzareview"
                 />
               </a>
               <div className="p-6">
@@ -162,7 +162,7 @@ function App() {
                 <img
                   className="rounded-t-lg"
                   src="../public/img/weatherapp.jpg"
-                  alt="weatherApp"
+                  alt="weatherapp"
                 />
               </a>
               <div className="p-6">
