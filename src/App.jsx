@@ -107,7 +107,7 @@ function App() {
               <a href="#!">
                 <img
                   className="rounded-t-lg"
-                  src="../public/img/pizzaReview.jpg"
+                  src="../public/img/pizzareview.jpg"
                   alt="pizzaReview"
                 />
               </a>
@@ -161,7 +161,7 @@ function App() {
               <a href="#!">
                 <img
                   className="rounded-t-lg"
-                  src="../public/img/weatherApp.jpg"
+                  src="../public/img/weatherapp.jpg"
                   alt="weatherApp"
                 />
               </a>
