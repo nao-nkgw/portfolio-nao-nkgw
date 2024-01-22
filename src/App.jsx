@@ -534,7 +534,7 @@ function App() {
 
               <div className="text-xs px-auto  pt-2">
                 <p className="container flex pr-20 lg:text-base px-auto my-auto pb-5 pt-3 font-medium justify-en text-white md:text-xs md:pl-10 md:px-auto md:pb-5 md:pt-3 md:xs text-end ">
-                  ©2023 Nao Nakagawa
+                  ©2024 Nao Nakagawa
                 </p>
               </div>
             </div>
