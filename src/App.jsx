@@ -2,8 +2,6 @@ import BackTop from "./BackTop";
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
 
-
-
 emailjs.init("RjChyRtl7U1TzHN7a");
 
 function App() {
@@ -80,10 +78,14 @@ function App() {
               from software engineering to UI/UX. This includes graphics and
               also illustrations!
             </p>
-            <a href="https://drive.google.com/file/d/1ZIbLklQ0fGQVeNJ4nQ9Y4ALsFN2Bopae/view?usp=sharing" target="blank">
-            <button className="text-white bg-rose-500 py-2 px-6 border-0 rounded text-lg hover:bg-rose-600 duration-300">
-              VIEW CV
-            </button></a>
+            <a
+              href="https://drive.google.com/file/d/1eYd_GMS2PT3Ys7mEP-5M2u0gVx0NejW3/view?usp=sharing"
+              target="blank"
+            >
+              <button className="text-white bg-rose-500 py-2 px-6 border-0 rounded text-lg hover:bg-rose-600 duration-300">
+                VIEW CV
+              </button>
+            </a>
           </div>
           <div className="md:w-1/2 lg:max-w-lg w-5/6">
             <img src="./img/icon-green.svg"></img>
@@ -124,7 +126,10 @@ function App() {
                 </p>
 
                 <div className="flex container mx-auto pt-2 justify-center">
-                  <a href="https://github.com/nao-nkgw/mern-pizza-blog-frontend" target="blank">
+                  <a
+                    href="https://github.com/nao-nkgw/mern-pizza-blog-frontend"
+                    target="blank"
+                  >
                     <svg
                       className="h-8 w-8 text-red-500 mr-4 hover:text-rose-800 hover:scale-110 hover:duration-200"
                       viewBox="0 0 24 24"
@@ -138,7 +143,10 @@ function App() {
                       <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
                     </svg>{" "}
                   </a>
-                  <a href="https://nao-nkgw-mern-pizza-review.netlify.app/" target="blank">
+                  <a
+                    href="https://nao-nkgw-mern-pizza-review.netlify.app/"
+                    target="blank"
+                  >
                     <svg
                       className="h-8 w-8 text-red-500 hover:text-rose-800 hover:scale-110 hover:duration-200"
                       viewBox="0 0 24 24"
@@ -177,7 +185,10 @@ function App() {
                 </p>
 
                 <div className="flex container mx-auto pt-2 justify-center">
-                  <a href="https://github.com/nao-nkgw/weather-app" target="blank">
+                  <a
+                    href="https://github.com/nao-nkgw/weather-app"
+                    target="blank"
+                  >
                     <svg
                       className="h-8 w-8 text-red-500 mr-4 hover:text-rose-800 hover:scale-110 hover:duration-200"
                       viewBox="0 0 24 24"
@@ -480,9 +491,7 @@ function App() {
           </div>
           <div className="h-full w-full overflow-x-hidden">
             <BackTop />
-
           </div>
-
         </div>
       </section>
 
