@@ -109,11 +109,94 @@ function App() {
               <a href="#!">
                 <img
                   className="rounded-t-lg"
+                  src="./img/energizeMe.png"
+                  alt="energizeMe"
+                />
+              </a>
+              <div className="relative p-6 md:h-[290px] xl:h-[235px]">
+                <h5 className="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-gray-700">
+                  EnergizeMe
+                </h5>
+                <p className="mb-4 text-base text-neutral-600 dark:text-gray-700">
+                  For our DCI final group project we have developed an
+                  application for beginners in exercise. I was responsible for
+                  research, UX/UI design, and front-end development.
+                </p>
+
+                <div className="absolute bottom-3 right-0 flex container mx-auto justify-center">
+                  <a
+                    href="https://github.com/Raum7-Final-Project/EnergizeMe"
+                    target="blank"
+                  >
+                    <svg
+                      className="h-8 w-8 text-red-500 mr-4 hover:text-rose-800 hover:scale-110 hover:duration-200"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      {" "}
+                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                    </svg>{" "}
+                  </a>
+                  <a
+                    href="https://www.figma.com/proto/oiWRv5Exq2HZY6IaAZTmah/%E7%84%A1%E9%A1%8C?node-id=2-1281&starting-point-node-id=2%3A1281&t=icsijlIc8zwTaF1r-1"
+                    target="blank"
+                  >
+                    <svg
+                      className="h-8 w-8 text-red-500 mr-4 hover:text-rose-800 hover:scale-110 hover:duration-200"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z" />
+                      <path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z" />
+                      <path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z" />
+                      <path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z" />
+                      <path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z" />
+                    </svg>
+                  </a>
+
+                  <a
+                    href="https://drive.google.com/file/d/1ysmDFcXFujgApkyPl9q2hmfwpdxM_9wn/view?usp=sharing"
+                    target="blank"
+                  >
+                    <svg
+                      className="h-8 w-8 text-red-500 mr-4 hover:text-rose-800 hover:scale-110 hover:duration-200"
+                      height="56"
+                      viewBox="0 0 56 56"
+                      width="56"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      stroke="currentColor"
+                      strokeWidth="1"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="m28.0118 11.3945c-1.8047-2.25-6.2344-4.2422-11.1563-4.2422-6.5156 0-11.7656 3.3516-13.0547 6.4922v32.7422c0 1.7813 1.1719 2.461 2.4375 2.461 1.0313 0 1.6172-.3047 2.25-.7969 1.336-1.1485 4.0313-2.6953 8.3672-2.6953 4.3125 0 7.3359 1.5 8.5078 2.5547.6094.4921 1.3594.9375 2.6485.9375 1.2656 0 1.9922-.4922 2.625-.9375 1.2422-.9844 4.1953-2.5547 8.5078-2.5547 4.3359 0 7.0546 1.5703 8.3674 2.6953.6326.4922 1.2187.7969 2.2497.7969 1.2658 0 2.4375-.6797 2.4375-2.461v-32.7422c-1.2888-3.1406-6.539-6.4922-13.0546-6.4922-4.9219 0-9.3516 1.9922-11.1328 4.2422zm-20.4375 3.375c.539-1.4531 3.9375-4.0781 9.2812-4.0781 5.3203 0 8.7891 2.6484 9.2578 4.0781v29.6485c-2.2265-1.6641-5.625-2.6016-9.2578-2.6016-3.6563 0-7.0547.9375-9.2812 2.6953zm40.8516 0v29.7422c-2.2267-1.7578-5.6251-2.6953-9.2813-2.6953-3.6328 0-7.0313.9375-9.2578 2.6016v-29.6485c.4687-1.4297 3.9375-4.0781 9.2578-4.0781 5.3437 0 8.7422 2.625 9.2813 4.0781z" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="mx-3 mt-6 flex flex-col self-start rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.2),0_10px_20px_-2px_rgba(0,0,0,0.1)] dark:bg-white sm:shrink-0 sm:grow sm:basis-0">
+              <a href="#!">
+                <img
+                  className="rounded-t-lg"
                   src="./img/pizzareview.png"
                   alt="pizzareview"
                 />
               </a>
-              <div className="p-6">
+              <div className="relative p-6 md:h-[290px] xl:h-[235px]">
                 <h5 className="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-gray-700">
                   Pizza Review
                 </h5>
@@ -125,7 +208,7 @@ function App() {
                   any time by registering.
                 </p>
 
-                <div className="flex container mx-auto pt-2 justify-center">
+                <div className="absolute bottom-3 right-0 flex container mx-auto justify-center">
                   <a
                     href="https://github.com/nao-nkgw/mern-pizza-blog-frontend"
                     target="blank"
@@ -173,7 +256,7 @@ function App() {
                   alt="weatherapp"
                 />
               </a>
-              <div className="p-6">
+              <div className="relative p-6 md:h-[290px] xl:h-[235px]">
                 <h5 className="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-gray-700">
                   Weather App
                 </h5>
@@ -184,7 +267,7 @@ function App() {
                   of images appropriate for that weather.
                 </p>
 
-                <div className="flex container mx-auto pt-2 justify-center">
+                <div className="absolute bottom-3 right-0 flex container mx-auto justify-center">
                   <a
                     href="https://github.com/nao-nkgw/weather-app"
                     target="blank"
