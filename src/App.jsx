@@ -72,11 +72,11 @@ function App() {
             </p>
             <p className="mb-12 leading-relaxed">
               Hello! I&lsquo;m Nao Nakagawa. A Web Developer + Designer based in
-              Düsseldorf, Germany. I&lsquo;m currently attending Digital Career
-              Institute, Web Development course and I will graduate there in
-              March 2024. I have a passion for all things technology and design,
-              from software engineering to UI/UX. This includes graphics and
-              also illustrations!
+              Düsseldorf, Germany. I attended Digital Career Institute, Web
+              Development course and I graduated there in March 2024. I have a
+              passion for all things technology and design, from software
+              engineering to UI/UX. This includes graphics and also
+              illustrations!
             </p>
             <a
               href="https://drive.google.com/file/d/1eYd_GMS2PT3Ys7mEP-5M2u0gVx0NejW3/view?usp=sharing"
