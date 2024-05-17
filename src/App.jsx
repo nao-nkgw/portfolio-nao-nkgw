@@ -372,10 +372,10 @@ function App() {
                 <img
                   className="flex rounded-lg"
                   src="./img/sass.jpg"
-                  alt="Saas"
+                  alt="Sass"
                 />
               </div>
-              <p className=" pt-1 ">Saas</p>
+              <p className=" pt-1 ">Sass</p>
             </div>
             <div className=" mx-0 mt-0 self-start text-center">
               <div className=" mx-3 mt-6  self-start rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.2),0_10px_20px_-2px_rgba(0,0,0,0.1)] dark:bg-white sm:shrink-0 sm:grow sm:basis-0">
