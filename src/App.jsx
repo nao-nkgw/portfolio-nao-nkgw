@@ -72,18 +72,17 @@ function App() {
             </p>
             <p className="mb-12 leading-relaxed">
               Hello! I&lsquo;m Nao Nakagawa. A Web Developer + Designer based in
-              Düsseldorf, Germany. I attended Digital Career Institute, Web
-              Development course and I graduated there in March 2024. I have a
-              passion for all things technology and design, from software
-              engineering to UI/UX. This includes graphics and also
-              illustrations.
+              Düsseldorf, Germany. I have a passion for all things technology
+              and design, from software engineering to UI/UX. This includes
+              graphics and also illustrations.
             </p>
             <a
-              href="https://drive.google.com/file/d/1g1MTfrQIOnKVktuzImtnrWpwJe-BX_he/view?usp=sharing"
-              target="blank"
+              href="#contact"
+              // href="https://drive.google.com/file/d/1g1MTfrQIOnKVktuzImtnrWpwJe-BX_he/view?usp=sharing"
+              // target="blank"
             >
               <button className="text-white bg-rose-500 py-2 px-6 border-0 rounded text-lg hover:bg-rose-600 duration-300">
-                VIEW CV
+                Contact me
               </button>
             </a>
           </div>
